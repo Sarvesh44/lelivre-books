@@ -1,0 +1,64 @@
+html, body, #container { height: 100%; }
+body > #container{
+	height: auto; min-height: 100%;
+	margin-bottom: 150px;
+}
+#content { padding-bottom: 3em; }
+.logo{
+	width: 300px;
+	height: 100px;
+}
+.site-header{
+	background: #99ff99;
+	width: 100%;
+	height: 100px;
+}
+.header{
+	font-size:60px;
+	position:relative; 
+	margin-left: 50px;
+	color:#009988;
+	
+}
+.footer{
+    text-align: center;
+    font-size: 12px;
+    font-family: verdana ;
+    width: 100%;
+    height: 80px ;
+    background-color: #99ff99 ;
+	clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+}
+
+
+		@import url(//fonts.googleapis.com/css?family=Lato:700);
+
+		body {
+			margin:0;
+			font-family:'Lato', sans-serif;
+			text-align:center;
+			color: #999;
+		}
+
+		.welcome {
+			width: 300px;
+			height: 200px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -150px;
+			margin-top: -100px;
+		}
+
+		a, a:visited {
+			text-decoration:none;
+		}
+
+		h1 {
+			font-size: 32px;
+			margin: 16px 0 0 0;
+		}
