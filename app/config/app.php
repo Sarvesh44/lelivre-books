@@ -121,6 +121,8 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
 		'Zizaco\Confide\ConfideServiceProvider',
+		'Moltin\Cart\CartServiceProvider',
+
 
 	),
 
@@ -188,6 +190,7 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
 		'Confide'    	  => 'Zizaco\Confide\ConfideFacade',
+		'Cart' 			  => 'Moltin\Cart\Facade',
 
 	),
 

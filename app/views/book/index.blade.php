@@ -24,9 +24,11 @@
 				</tr>
 
 			@endforeach
+
 		</tbody>
 
 		</table>
+{{ $books->links() }}
 @else
 	There are no books
 @endif

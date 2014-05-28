@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title> {{ $title }} </title>
 	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet" >
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" >
 	<style type="text/css">
 		table form{margin-bottom: 0px;}
 		form ul {margin-left: 0; list-style: none;}
@@ -32,9 +33,10 @@
           <span align="center" class="header" >  LELIVRE ONLINE BOOK STORE </span></div></div>
     </div>
 
-
-<select id="searchbox" name="q" placeholder="Search books..." class="form-control"></select>
-
+{{Form::open(array('url' => 'api/search'))}}
+        {{ Form::text ('q', null, array('placeholder' => 'Search Books...'))}}
+{{ Form::submit('search') }}
+{{ Form::close() }}
     		@yield('content')
     	</div>
 

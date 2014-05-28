@@ -49,5 +49,5 @@
 <div align="center"><hr width = "60%"/>
             <div class="new-user"> <i>Already Registered:  {{ HTML::link('/login', 'Sign In', array('class'=> 'btn btn-primary') )}} </i></div>
             </div>			
-
+{{ Form::close() }}
 @stop

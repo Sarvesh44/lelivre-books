@@ -8,4 +8,6 @@
 	{{ HTML::link('logout','Logout')}}
 </div>
 
+$books = DB::table('book')->get()
+
 @stop

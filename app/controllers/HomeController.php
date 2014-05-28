@@ -32,8 +32,8 @@ class HomeController extends BaseController {
 		public function getWelcome()
 	{
 		$title = 'LiLevre Welcome Page';
-	return View::make('home.welcome')
-		->with('title', $title);
+		return View::make('home.welcome')
+			->with('title', $title);
 	}
 
 	public function postLogin()
@@ -105,7 +105,7 @@ class HomeController extends BaseController {
 	public function logout(){
 		echo 'kkkkkkkk';
 		Auth::logout();
-		return Redirect::to('/');
+		return Redirect::to('/user/login');
 	}
 
 

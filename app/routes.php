@@ -10,6 +10,13 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
+Route::get('/hello', function()
+{
+	$title = 'LiLevre Login Page';
+	return View::make('hello');
+		
+});
+
 /*
 Route::get('/', function()
 {
@@ -41,13 +48,13 @@ Route::post('/', 'HomeController@postLogin');
 Route::post('/login', 'HomeController@postLogin');
 Route::get('/logout', 'HomeController@logout');
 //Route::get('/welcome', 'HomeController@getWelcome');
-
+/*
 Route::group(array('before' => 'auth'), function()
 {
     Route::get('lelivre', 'LelivreController@getIndex');
 
 
-});
+});*/
 
 /** Database Queries goes in here **/
 /*
@@ -99,3 +106,10 @@ Route::get('contact-us', function()
 
 
 Route::get('api/search', 'ApiSearchController@index');
+Route::post('api/search', 'ApiSearchController@index');
+Route::post('api/advanced-search', 'AdvancedSearchController@index');
+//Route::get('advanced-search', 'AdvancedSearchController@index');
+
+
+Route::get('books/{isbn}', 'BookController@getDetails');
+//Route::get('books/{isbn}', 'BookController@getReviews');

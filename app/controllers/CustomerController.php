@@ -192,7 +192,7 @@ class CustomerController extends BaseController {
         // with the second parameter as true.
         // logAttempt will check if the 'email' perhaps is the username.
         // Get the value from the config file instead of changing the controller
-   /*     if ( Confide::logAttempt( $input, Config::get('confide::signup_confirm') ) )
+        if ( Confide::logAttempt( $input, false ) )
         {
             // Redirect the user to the URL they were trying to access before
             // caught by the authentication filter IE Redirect::guest('user/login').
@@ -202,7 +202,7 @@ class CustomerController extends BaseController {
         }
         else
         {
-     */
+     
      
           $customer = new Customer;
 
@@ -211,10 +211,10 @@ class CustomerController extends BaseController {
             {
                 $err_msg = Lang::get('confide::confide.alerts.too_many_attempts');
             }
-            elseif( $customer->checkUserExists( $input ) and ! $customer->isConfirmed( $input ) )
+            /*elseif( $customer->checkUserExists( $input ) and ! $customer->isConfirmed( $input ) )
             {
                 $err_msg = Lang::get('confide::confide.alerts.not_confirmed');
-            }
+            }*/
             else
             {
                 $err_msg = Lang::get('confide::confide.alerts.wrong_credentials');
@@ -223,7 +223,7 @@ class CustomerController extends BaseController {
                         return Redirect::to('user/login')
                             ->withInput(Input::except('password'))
                 ->with( 'error', $err_msg );
-       // }
+        }
     }
 
     /**
